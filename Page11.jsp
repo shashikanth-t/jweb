@@ -15,7 +15,7 @@ try
         Class.forName("com.mysql.jdbc.Driver");
         System.out.println("Drivers are loaded sucessfully.");
 
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/empdb","root","root");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/empdb","admuser","admuser");
         System.out.println("Drivers are registered sucessfully.");
 
         PreparedStatement pst = con.prepareStatement("insert into emp_inf values(?,?,?,?)");
@@ -27,7 +27,7 @@ try
         if(x>0)
         {
         out.println(" Record(s) inserted successfully.");
-        response.sendRedirect("/JSPAPPS/Page1.jsp");
+        response.sendRedirect("/jweb/Page1.jsp");
       }else{
         out.println("Record(s) insertion Failed.");
       }

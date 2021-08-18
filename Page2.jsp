@@ -6,7 +6,7 @@
 Class.forName("com.mysql.jdbc.Driver");
 System.out.println("Drivers are loaded sucessfully.");
 
-Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/empdb","root","root");
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/empdb","admuser","admuser");
 System.out.println("Drivers are registered sucessfully.");
 
 Statement st=con.createStatement();
